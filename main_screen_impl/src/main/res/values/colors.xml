@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background">#A9BDCC</color>
+    <color name="start_money">#DAC370</color>
+    <color name="finish_money">#CDA146</color>
+    <color name="brown">#61460C</color>
+    <color name="start_game">#8CB2CF</color>
+    <color name="finish_game">#4E75B8</color>
+    <color name="start_info">#A6DFE1</color>
+    <color name="finish_info">#6AB8B5</color>
+    <color name="finish_infof">#1AE81E63</color>
+</resources>

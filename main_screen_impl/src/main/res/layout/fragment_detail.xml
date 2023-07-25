@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/home"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:src="@drawable/default_team"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/guest"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:src="@drawable/default_team"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/tv_game"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/gradient_game"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="1/2 SuperCup"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_home"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:textSize="25sp"
+        android:text="Winnipeg Jets"
+        android:textColor="@color/finish_game"
+        app:layout_constraintEnd_toStartOf="@id/tv_score"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_game" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="@color/brown"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:textSize = "25sp"
+        android:shadowRadius="2"
+        android:text="0:4"
+        android:textColor="@color/finish_money"
+        app:layout_constraintEnd_toStartOf="@id/tv_guest"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/tv_home"
+        app:layout_constraintTop_toBottomOf="@id/tv_game" />
+
+    <TextView
+        android:id="@+id/tv_guest"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:textSize="25sp"
+        android:text="New York Islanders"
+        android:textColor="@color/finish_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/tv_score"
+        app:layout_constraintTop_toBottomOf="@id/tv_game" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Game over"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_score" />
+
+    <TextView
+        android:id="@+id/periods"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="All game"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_time" />
+
+    <TextView
+        android:id="@+id/tv_goal_home"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="0"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/periods"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_shots_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_goal_home"
+        android:text="20"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_al_1"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/periods"
+        app:layout_constraintEnd_toStartOf="@id/tv_goal_away"
+        android:text="Голы"
+        app:layout_constraintStart_toEndOf="@id/tv_goal_home" />
+
+    <TextView
+        android:id="@+id/tv_al_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_al_1"
+        android:text="Удары по воротам"
+        app:layout_constraintEnd_toStartOf="@id/tv_shots_away"
+        app:layout_constraintStart_toEndOf="@id/tv_shots_home" />
+
+    <TextView
+        android:id="@+id/period_1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Period 1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shots_home" />
+
+
+    <TextView
+        android:id="@+id/tv_goals_1_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/period_1"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_shots_1_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_goals_1_home"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_rink_1_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shots_1_home"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_period_1_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/period_1"
+        app:layout_constraintEnd_toStartOf="@id/tv_goals_1_away"
+        android:text="Голы"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/tv_goals_1_home" />
+
+    <TextView
+        android:id="@+id/tv_period_1_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_period_1_1"
+        android:text="Удары по воротам"
+        app:layout_constraintEnd_toStartOf="@id/tv_shots_1_away"
+        app:layout_constraintStart_toEndOf="@id/tv_shots_1_home" />
+
+    <TextView
+        android:id="@+id/tv_period_1_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_period_1_2"
+        android:text="Сторона ринга"
+        app:layout_constraintEnd_toStartOf="@id/tv_rink_1_away"
+        app:layout_constraintStart_toEndOf="@id/tv_rink_1_home" />
+
+    <TextView
+        android:id="@+id/period_2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Period 2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_rink_1_home" />
+
+
+    <TextView
+        android:id="@+id/tv_goals_2_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/period_2"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_shots_2_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_goals_2_home"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_rink_2_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shots_2_home"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_period_2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/period_2"
+        app:layout_constraintEnd_toStartOf="@id/tv_goals_2_away"
+        android:text="Голы"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/tv_goals_2_home" />
+
+    <TextView
+        android:id="@+id/tv_period_2_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_period_2_1"
+        android:text="Удары по воротам"
+        app:layout_constraintEnd_toStartOf="@id/tv_shots_2_away"
+        app:layout_constraintStart_toEndOf="@id/tv_shots_2_home" />
+
+    <TextView
+        android:id="@+id/tv_period_2_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_period_2_2"
+        android:text="Сторона ринга"
+        app:layout_constraintEnd_toStartOf="@id/tv_rink_2_away"
+        app:layout_constraintStart_toEndOf="@id/tv_rink_2_home" />
+
+    <TextView
+        android:id="@+id/period_3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Period 3"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_rink_2_home" />
+
+
+    <TextView
+        android:id="@+id/tv_goals_3_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/period_3"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_shots_3_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_goals_3_home"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_rink_3_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shots_3_home"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_period_3_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/period_3"
+        app:layout_constraintEnd_toStartOf="@id/tv_goals_3_away"
+        android:text="Голы"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/tv_goals_3_home" />
+
+    <TextView
+        android:id="@+id/tv_period_3_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_period_3_1"
+        android:text="Удары по воротам"
+        app:layout_constraintEnd_toStartOf="@id/tv_shots_3_away"
+        app:layout_constraintStart_toEndOf="@id/tv_shots_3_home" />
+
+    <TextView
+        android:id="@+id/tv_period_3_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_period_3_2"
+        android:text="Сторона ринга"
+        app:layout_constraintEnd_toStartOf="@id/tv_rink_3_away"
+        app:layout_constraintStart_toEndOf="@id/tv_rink_3_home" />
+
+    <TextView
+        android:id="@+id/tv_goal_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/periods"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_shots_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_goal_away"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_goals_1_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/period_1"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_shots_1_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_goals_1_away"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_rink_1_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shots_1_away"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_goals_2_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@id/period_2"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_shots_2_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_goals_2_away"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_rink_2_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shots_2_away"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_goals_3_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="1"
+        app:layout_constraintTop_toBottomOf="@id/period_3"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_shots_3_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_goals_3_away"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_rink_3_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shots_3_away"
+        android:layout_marginEnd="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
